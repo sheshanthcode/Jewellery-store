@@ -101,22 +101,25 @@
       padding:7px;
       border-radius: 5px;
     }
-/* Desktop - 4 products */
-@media screen and (min-width: 1201px){
+@media (min-width: 1201px) and (max-width:1533px){
     .products{
         grid-template-columns: repeat(4, 1fr);
     }
 }
 
-/* Laptop & Tablet - 3 products */
-@media screen and (max-width: 1200px){
+
+@media (min-width:1001px)and (max-width: 1200px){
     .products{
         grid-template-columns: repeat(3, 1fr);
     }
 }
+@media (min-width:701px)and (max-width: 1000px){
+    .products{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
 
-/* Mobile - 1 product */
-@media screen and (max-width: 768px){
+@media screen and (max-width: 700px){
 
     body{
         flex-direction: column;
