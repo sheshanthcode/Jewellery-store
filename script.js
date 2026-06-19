@@ -1,0 +1,291 @@
+ const products= [{
+      id: 1,
+      name: "Royal Gold Necklace",
+      price: "$299.99",
+      image: "jewellery_001.png",
+      slug: "royal-gold-necklace"
+   },
+   {
+      id: 2,
+      name: "Diamond Pendant Set",
+      price: "$349.99",
+      image: "jewellery_002.png",
+      slug: "diamond-pendant-set"
+   },
+   {
+      id: 3,
+      name: "Traditional Bridal Necklace",
+      price: "$499.99",
+      image: "jewellery_003.png",
+      slug: "traditional-bridal-necklace"
+   },
+   {
+      id: 4,
+      name: "Luxury Gold Chain",
+      price: "$279.99",
+      image: "jewellery_004.png",
+      slug: "luxury-gold-chain"
+   },
+   {
+      id: 5,
+      name: "Elegant Jewelry Set",
+      price: "$599.99",
+      image: "jewellery_005.png",
+      slug: "elegant-jewelry-set"
+   },
+   {
+      id: 6,
+      name: "Pearl Necklace",
+      price: "$249.99",
+      image: "jewellery_006.png",
+      slug: "pearl-necklace"
+   },
+   {
+      id: 7,
+      name: "Gold Bridal Set",
+      price: "$799.99",
+      image: "jewellery_007.png",
+      slug: "gold-bridal-set"
+   },
+   {
+      id: 8,
+      name: "Classic Diamond Ring",
+      price: "$399.99",
+      image: "jewellery_008.png",
+      slug: "classic-diamond-ring"
+   },
+   {
+      id: 9,
+      name: "Designer Necklace",
+      price: "$329.99",
+      image: "jewellery_009.png",
+      slug: "designer-necklace"
+   },
+   {
+      id: 10,
+      name: "Golden Pendant",
+      price: "$199.99",
+      image: "jewellery_010.png",
+      slug: "golden-pendant"
+   },
+   {
+      id: 11,
+      name: "Bridal Jewelry Set",
+      price: "$699.99",
+      image: "jewellery_011.png",
+      slug: "bridal-jewelry-set"
+   },
+   {
+      id: 12,
+      name: "Diamond Choker",
+      price: "$459.99",
+      image: "jewellery_012.png",
+      slug: "diamond-choker"
+   },
+   {
+      id: 13,
+      name: "Luxury Earrings",
+      price: "$189.99",
+      image: "jewellery_013.png",
+      slug: "luxury-earrings"
+   },
+   {
+      id: 14,
+      name: "Royal Pendant",
+      price: "$289.99",
+      image: "jewellery_014.png",
+      slug: "royal-pendant"
+   },
+   {
+      id: 15,
+      name: "Gold Necklace Set",
+      price: "$549.99",
+      image: "jewellery_015.png",
+      slug: "gold-necklace-set"
+   },
+   {
+      id: 16,
+      name: "Diamond Bridal Set",
+      price: "$899.99",
+      image: "jewellery_016.png",
+      slug: "diamond-bridal-set"
+   },
+   {
+      id: 17,
+      name: "Pearl Jewelry Set",
+      price: "$359.99",
+      image: "jewellery_017.png",
+      slug: "pearl-jewelry-set"
+   },
+   {
+      id: 18,
+      name: "Gold Ring",
+      price: "$229.99",
+      image: "jewellery_018.png",
+      slug: "gold-ring"
+   },
+   {
+      id: 19,
+      name: "Elegant Chain",
+      price: "$179.99",
+      image: "jewellery_019.png",
+      slug: "elegant-chain"
+   },
+   {
+      id: 20,
+      name: "Diamond Necklace",
+      price: "$649.99",
+      image: "jewellery_020.png",
+      slug: "diamond-necklace"
+   },
+   {
+      id: 21,
+      name: "Wedding Jewelry",
+      price: "$749.99",
+      image: "jewellery_021.png",
+      slug: "wedding-jewelry"
+   },
+   {
+      id: 22,
+      name: "Luxury Ring",
+      price: "$419.99",
+      image: "jewellery_022.png",
+      slug: "luxury-ring"
+   },
+   {
+      id: 23,
+      name: "Gold Earrings",
+      price: "$159.99",
+      image: "jewellery_023.png",
+      slug: "gold-earrings"
+   },
+   {
+      id: 24,
+      name: "Premium Necklace",
+      price: "$529.99",
+      image: "jewellery_024.png",
+      slug: "premium-necklace"
+   },
+   {
+      id: 25,
+      name: "Diamond Pendant",
+      price: "$309.99",
+      image: "jewellery_025.png",
+      slug: "diamond-pendant"
+   },
+   {
+      id: 26,
+      name: "Bridal Necklace",
+      price: "$689.99",
+      image: "jewellery_026.png",
+      slug: "bridal-necklace"
+   },
+   {
+      id: 27,
+      name: "Luxury Gold Set",
+      price: "$999.99",
+      image: "jewellery_027.png",
+      slug: "luxury-gold-set"
+   },
+   {
+      id: 28,
+      name: "Elegant Bracelet",
+      price: "$269.99",
+      image: "jewellery_028.png",
+      slug: "elegant-bracelet"
+   },
+   {
+      id: 29,
+      name: "Pearl Earrings",
+      price: "$149.99",
+      image: "jewellery_029.png",
+      slug: "pearl-earrings"
+   },
+   {
+      id: 30,
+      name: "Royal Diamond Set",
+      price: "$1199.99",
+      image: "jewellery_030.png",
+      slug: "royal-diamond-set"
+   },
+   {
+      id: 31,
+      name: "Golden Choker",
+      price: "$389.99",
+      image: "jewellery_031.png",
+      slug: "golden-choker"
+   },
+   {
+      id: 32,
+      name: "Traditional Set",
+      price: "$569.99",
+      image: "jewellery_032.png",
+      slug: "traditional-set"
+   },
+   {
+      id: 33,
+      name: "Designer Ring",
+      price: "$249.99",
+      image: "jewellery_033.png",
+      slug: "designer-ring"
+   },
+   {
+      id: 34,
+      name: "Premium Bridal Set",
+      price: "$849.99",
+      image: "jewellery_034.png",
+      slug: "premium-bridal-set"
+   },
+   {
+      id: 35,
+      name: "Luxury Pendant",
+      price: "$279.99",
+      image: "jewellery_035.png",
+      slug: "luxury-pendant"
+   },
+   {
+      id: 36,
+      name: "Diamond Earrings",
+      price: "$339.99",
+      image: "jewellery_036.png",
+      slug: "diamond-earrings"
+   },
+   {
+      id: 37,
+      name: "Gold Chain Deluxe",
+      price: "$299.99",
+      image: "jewellery_037.png",
+      slug: "gold-chain-deluxe"
+   },
+   {
+      id: 38,
+      name: "Pearl Necklace Deluxe",
+      price: "$459.99",
+      image: "jewellery_038.png",
+      slug: "pearl-necklace-deluxe"
+   },
+   {
+      id: 39,
+      name: "Royal Wedding Set",
+      price: "$1299.99",
+      image: "jewellery_039.png",
+      slug: "royal-wedding-set"
+   },
+];
+    
+    function displayProducts(){
+      let productDiv = document.getElementById("products");
+      productDiv.innerHTML ="";
+      products.forEach((product)=>{
+        let productContainer = document.createElement("div");
+        productContainer.classList.add("product");
+        productContainer.innerHTML =`
+          <img src="images/${product.image}"  class="img1">
+       <p class="p1"> ${product.name}</p>
+       <p class="p2">${product.price} </p>
+       <button class="add">Add to Cart</button>
+        `;
+        productDiv.appendChild(productContainer);
+      });
+    }
+    displayProducts();
