@@ -1,6 +1,6 @@
  const products= [{
       id: 1,
-      name: "Royal Gold Necklace",
+      name: "Royal Gold ring",
       price: "$299.99",
       image: "jewellery_001.png",
       slug: "royal-gold-necklace"
@@ -190,7 +190,7 @@
    {
       id: 28,
       name: "Elegant Bracelet",
-      price: "$269.99",
+      price:"$269.99",
       image: "jewellery_028.png",
       slug: "elegant-bracelet"
    },
@@ -272,20 +272,85 @@
       slug: "royal-wedding-set"
    },
 ];
-    
-    function displayProducts(){
+    let cart = [];
+    function searchProducts(){
+      let query = document.getElementById("search").value.toLowerCase();
+      
+      let filtered = products.filter((product)=>{
+        return product.name.toLowerCase().includes(query);
+      });
+      displayProducts(filtered);
+    }
+    function displayProducts(filtered = products){
       let productDiv = document.getElementById("products");
       productDiv.innerHTML ="";
-      products.forEach((product)=>{
+      filtered.forEach((product)=>{
         let productContainer = document.createElement("div");
         productContainer.classList.add("product");
         productContainer.innerHTML =`
           <img src="images/${product.image}"  class="img1">
        <p class="p1"> ${product.name}</p>
        <p class="p2">${product.price} </p>
-       <button class="add">Add to Cart</button>
+       <button  onclick = "addToCart(${product.id});" class="add" >Add to Cart</button>
         `;
         productDiv.appendChild(productContainer);
       });
     }
+     function addToCart(id){
+       let selectedProduct = products.find((product) => product.id === id);
+       let existedItem = cart.find((item) => item.id === id);
+       if(existedItem){
+         existedItem.quantity++;
+       }
+       else{
+       cart.push({...selectedProduct,quantity:1});
+       }
+       updateCart();
+     };
+     function updateCart(){
+       let cartDiv = document.getElementById("cart-c");
+       cartDiv.innerHTML = "";
+       
+       let totalAmount = 0;
+       
+       if(cart.length === 0){
+         cartDiv.innerHTML = "<p> your cart is empty </p>" ;
+         document.getElementById("total").textContent = "Total:$0";
+         localStorage.removeItem("cart");
+         return;
+       }
+       
+       cart.forEach((item,index)=>{
+         let cartItem = document.createElement("div");
+         cartItem.classList.add("cart-p");
+         
+         totalAmount += parseFloat(item.price.replace("$", "")) * item.quantity;
+         
+         cartItem.innerHTML=`
+         <img src="images/${item.image}">
+        <p>${item.name} - ${item.price}</p>
+        <input type="number" min="1" value="${item.quantity}" onchange="updateQuantity(${index},this.value);" />
+        <button class="remove" onclick = "remove(${index});">Remove</button>
+         `;
+         cartDiv.appendChild(cartItem);
+       });
+       document.getElementById("total").textContent =`Total: $${totalAmount.toFixed(2)}`; 
+       
+       localStorage.setItem("cart", JSON.stringify(cart));
+     };
+     window.addEventListener("DOMContentLoaded",() =>{
+       let storedCart = localStorage.getItem("cart");
+       if(storedCart){
+       cart = JSON.parse(storedCart);
+        updateCart();
+       }
+     });
+     function remove(index){
+        cart.splice(index,1);
+        updateCart();
+     }
+     function updateQuantity(index , quantity){
+       cart[index].quantity = Math.max(1,quantity)
+       updateCart();
+     }
     displayProducts();
