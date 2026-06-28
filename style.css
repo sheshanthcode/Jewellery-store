@@ -295,13 +295,18 @@
         grid-template-columns: auto auto;
       }
       .product {
-        width:230px;
+        width:200px;
       }
       .img1 {
         width: 180px;
       }
       .s2 {
         font-size: 43px;
+      }
+      .search{
+        width: 100%;
+        margin-left:-5px;
+        margin-right:5px;
       }
        .cart {
         width: 100%;
