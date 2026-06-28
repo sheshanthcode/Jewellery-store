@@ -1,30 +1,43 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>jewellery store</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <div class ="left">
-    <div class ="heading">
-      <img class="logo" src="https://i.ibb.co/1fVWW5k5/file-00000000b95872079c22d33b9ed7463b-remove-bg-io-1.png" >
-    <span class = "s1">Jewellery Store</span><br/>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>jewellery store</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <button class="toast"id="toastBtn" >Jewellery Added to Cart</button>
+    <div class="left">
+      <div class="heading">
+        <button class="toggle"id="cart-toggle-btn" onclick="toggleCart();" >🛒</button>
+        <img
+          class="logo"
+          src="https://i.ibb.co/1fVWW5k5/file-00000000b95872079c22d33b9ed7463b-remove-bg-io-1.png"
+        />
+        <span class="s1">Jewellery Store</span><br />
+      </div>
+      <input
+        type="text"
+        placeholder="Search Products..."
+        oninput="searchProducts()"
+        class="search"
+        id="search"
+      />
+      <div class="products" id="products"></div>
     </div>
-    <input type="text" placeholder="Search Products..." oninput="searchProducts();" 
-  class="search"  id="search"/>
-    <div class = "products" id ="products"></div>
-  </div>
-   <div class ="cart">
-    <span class = "s2"> 🛒 your Cart</span>
-    <div class = "cart-c" id ="cart-c"></div>
-     <p class ="total" id="total">Total:$0 </p>
-  </div>
-  <script src="script.js"></script>
-</body>
+    <div class="cart">
+      <span class="s2"> 🛒 Your Cart</span>
+      <div class="cart-c" id="cart-c"></div>
+      <p class="total" id="total">Total:$0</p>
+    </div>
+    <script src = "script.js"></script>
+  </body>
 </html>
