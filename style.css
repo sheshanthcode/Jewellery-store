@@ -1,4 +1,4 @@
-* {
+ * {
         margin: 0px;
         padding: 0px;
       }
@@ -30,6 +30,7 @@
       .s1 {
         font-family: "Bodoni Moda";
         font-size: 30px;
+        margin-top: 20px;
         font-weight: 400px;
         color: #ffffff;
         margin-left: -35px;
@@ -407,3 +408,4 @@
         cursor: pointer;
       }
       }
+      
